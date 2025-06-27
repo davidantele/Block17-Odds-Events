@@ -8,12 +8,19 @@ function renderApp() {
   const app = document.getElementById("app");
   app.innerHTML = ""; // Clear the screen before rerendering
 
+  app.appendChild(renderTitle());
   app.appendChild(renderForm());
   app.appendChild(renderNumberBank());
   app.appendChild(renderSortButton());
   app.appendChild(renderSortFirstButton());
   app.appendChild(renderSortedCategories());
   app.appendChild(renderRemoveButton());
+}
+// === Title === //
+function renderTitle() {
+  const title = document.createElement("h1");
+  title.textContent = "Odds and Events";
+  return title;
 }
 
 function renderForm() {
